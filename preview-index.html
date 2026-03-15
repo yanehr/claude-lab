@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Design Concepts — Vivy Family Daycare</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: #0f0f13;
+      color: #e8e8f0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .hub {
+      max-width: 900px;
+      width: 100%;
+    }
+
+    .hub__eyebrow {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 0.75rem;
+    }
+
+    .hub__title {
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 0.6rem;
+    }
+
+    .hub__sub {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.65;
+      max-width: 540px;
+      margin-bottom: 2.5rem;
+    }
+
+    .original-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.35);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 0.4rem 1rem;
+      border-radius: 6px;
+      margin-bottom: 3rem;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .original-link:hover { color: rgba(255,255,255,0.7); border-color: rgba(255,255,255,0.25); }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+
+    @media (max-width: 700px) { .cards { grid-template-columns: 1fr; } }
+
+    .concept-card {
+      display: block;
+      text-decoration: none;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: #1a1a22;
+      transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+    }
+    .concept-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255,255,255,0.18);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.4);
+    }
+
+    .concept-card__swatch {
+      height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+    }
+
+    /* Concept A swatch — Storybook */
+    .swatch-a {
+      background: linear-gradient(145deg, #FFFBEF 0%, #FEF2CC 55%, #F7F0FF 100%);
+    }
+    /* Concept B swatch — Block Party */
+    .swatch-b {
+      background: #1D3557;
+      position: relative;
+    }
+    .swatch-b::before {
+      content: '';
+      position: absolute;
+      top: 18px; right: 18px;
+      width: 48px; height: 48px;
+      background: #F4D35E;
+      transform: rotate(12deg);
+      border: 3px solid #1D3557;
+      border-radius: 4px;
+    }
+    .swatch-b::after {
+      content: '';
+      position: absolute;
+      bottom: 18px; left: 18px;
+      width: 56px; height: 56px;
+      background: #E63946;
+      border: 3px solid #1D3557;
+      border-radius: 4px;
+      box-shadow: 4px 4px 0 rgba(0,0,0,0.4);
+    }
+    /* Concept C swatch — Nature Nest */
+    .swatch-c {
+      background: linear-gradient(160deg, #EBF2E8 0%, #D6E8D0 55%, #E8F4FA 100%);
+    }
+
+    .concept-card__body { padding: 1.25rem 1.5rem 1.5rem; }
+
+    .concept-card__letter {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+      margin-bottom: 0.4rem;
+    }
+
+    .concept-card__name {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.35rem;
+    }
+
+    .concept-card__desc {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.4);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .concept-card__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .tag {
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 4px;
+      letter-spacing: 0.04em;
+    }
+
+    /* A tags */
+    .tag-a-1 { background: rgba(244,167,185,0.18); color: #F4A7B9; }
+    .tag-a-2 { background: rgba(195,177,225,0.18); color: #C3B1E1; }
+    .tag-a-3 { background: rgba(168,218,220,0.18); color: #A8DADC; }
+    /* B tags */
+    .tag-b-1 { background: rgba(230,57,70,0.2);   color: #E63946; }
+    .tag-b-2 { background: rgba(244,211,94,0.2);  color: #d4a800; }
+    .tag-b-3 { background: rgba(69,123,157,0.2);  color: #74a8c4; }
+    /* C tags */
+    .tag-c-1 { background: rgba(135,168,120,0.2); color: #87A878; }
+    .tag-c-2 { background: rgba(201,106,78,0.2);  color: #C96A4E; }
+    .tag-c-3 { background: rgba(116,179,206,0.2); color: #74B3CE; }
+
+    .concept-card__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.45);
+      margin-top: 1rem;
+      transition: color 0.15s;
+    }
+    .concept-card:hover .concept-card__cta { color: rgba(255,255,255,0.85); }
+
+    .hub__footer {
+      margin-top: 3rem;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.2);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="hub">
+    <p class="hub__eyebrow">Vivy Family Daycare · Design Review</p>
+    <h1 class="hub__title">Three redesign concepts</h1>
+    <p class="hub__sub">Each concept uses the same HTML and content as the original — only the CSS changes. Click any card to open the full interactive preview.</p>
+    <a href="index.html" class="original-link">← Back to original</a>
+
+    <div class="cards">
+
+      <a href="preview-a.html" class="concept-card">
+        <div class="concept-card__swatch swatch-a" aria-hidden="true">✦</div>
+        <div class="concept-card__body">
+          <span class="concept-card__letter">Concept A</span>
+          <h2 class="concept-card__name">Storybook</h2>
+          <p class="concept-card__desc">Dusty pastels, Fredoka One headings, floating blob shapes, and wavy underlines. Dreamy and gentle — like opening a picture book.</p>
+          <div class="concept-card__tags">
+            <span class="tag tag-a-1">Fredoka One</span>
+            <span class="tag tag-a-2">Lavender</span>
+            <span class="tag tag-a-3">Blob waves</span>
+          </div>
+          <p class="concept-card__cta">Open preview →</p>
+        </div>
+      </a>
+
+      <a href="preview-b.html" class="concept-card">
+        <div class="concept-card__swatch swatch-b" aria-hidden="true"></div>
+        <div class="concept-card__body">
+          <span class="concept-card__letter">Concept B</span>
+          <h2 class="concept-card__name">Block Party</h2>
+          <p class="concept-card__desc">Bold primaries, dark navy nav, thick bordered cards with offset block shadows, and Righteous all-caps headings. High-energy and confident.</p>
+          <div class="concept-card__tags">
+            <span class="tag tag-b-1">Righteous</span>
+            <span class="tag tag-b-2">Sunflower</span>
+            <span class="tag tag-b-3">Block shadow</span>
+          </div>
+          <p class="concept-card__cta">Open preview →</p>
+        </div>
+      </a>
+
+      <a href="preview-c.html" class="concept-card">
+        <div class="concept-card__swatch swatch-c" aria-hidden="true">◉</div>
+        <div class="concept-card__body">
+          <span class="concept-card__letter">Concept C</span>
+          <h2 class="concept-card__name">Nature Nest</h2>
+          <p class="concept-card__desc">Sage, terracotta, and warm sand. Poppins 800 headings, leaf-shaped icon badges, rolling-hill hero, and considered rounded-rect buttons.</p>
+          <div class="concept-card__tags">
+            <span class="tag tag-c-1">Poppins</span>
+            <span class="tag tag-c-2">Terracotta</span>
+            <span class="tag tag-c-3">Sage green</span>
+          </div>
+          <p class="concept-card__cta">Open preview →</p>
+        </div>
+      </a>
+
+    </div>
+
+    <p class="hub__footer">All concepts share the same HTML structure · CSS-only theming · No content changes required</p>
+  </div>
+</body>
+</html>

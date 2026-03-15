@@ -1,0 +1,1920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Vivy Family Daycare — a licensed home daycare in [City, State]. Small groups, real connection, [X] years of experience." />
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:site_name"   content="Vivy Family Daycare" />
+  <meta property="og:title"       content="Vivy Family Daycare — [City, State]" />
+  <meta property="og:description" content="A licensed home daycare in [City, State]. Small groups, real connection, [X] years of experience." />
+  <meta property="og:url"         content="[https://your-domain.com]" />
+  <meta property="og:image"       content="[https://your-domain.com/og-image.jpg]" />
+  <!-- Twitter / X -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Vivy Family Daycare — [City, State]" />
+  <meta name="twitter:description" content="A licensed home daycare in [City, State]. Small groups, real connection, [X] years of experience." />
+  <meta name="twitter:image"       content="[https://your-domain.com/og-image.jpg]" />
+  <!-- Favicon placeholders — replace with your actual files -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="icon" type="image/png"     href="favicon.png" />
+  <title>Preview C — Nature Nest | Vivy Family Daycare</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Reset ─────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    img { display: block; max-width: 100%; }
+    button, input, select, textarea { font: inherit; }
+    a { color: inherit; }
+
+    /* ── Skip link ──────────────────────────────────────────────── */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 1rem;
+      background: var(--coral);
+      color: var(--white);
+      padding: 0.5rem 1.1rem;
+      border-radius: 0 0 var(--r-sm) var(--r-sm);
+      font-weight: 700;
+      font-size: 0.875rem;
+      text-decoration: none;
+      z-index: 200;
+      transition: top 0.15s;
+    }
+    .skip-link:focus { top: 0; }
+
+    /* ── Tokens ────────────────────────────────────────────────── */
+    :root {
+      --coral:        #FF6B6B;
+      --coral-dark:   #E85555;
+      --coral-light:  #FFF0F0;
+      --teal:         #4ECDC4;
+      --teal-dark:    #38B2AA;
+      --teal-light:   #E8FAFA;
+      --yellow:       #FFD93D;
+      --yellow-light: #FFFBE6;
+      --purple:       #9B7FEA;
+      --purple-light: #F4F0FF;
+
+      --white:        #FFFFFF;
+      --bg:           #FFFDF9;
+      --bg-alt:       #FFF6EE;
+      --bg-teal:      #F0FAFA;
+      --ink:          #1A1A2E;
+      --body:         #4A5568;
+      --muted:        #8896AB;
+      --border:       #EDE8E0;
+
+      --error:        #EF4444;
+      --success:      #10B981;
+
+      --glow-coral:   rgba(255,107,107,0.22);
+      --glow-teal:    rgba(78,205,196,0.22);
+
+      --heading: 'Baloo 2', system-ui, sans-serif;
+      --sans:    'Nunito', system-ui, sans-serif;
+      --max-w:   1100px;
+      --r:       18px;
+      --r-sm:    10px;
+      --r-pill:  999px;
+    }
+
+    /* ── Base ──────────────────────────────────────────────────── */
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Typography ────────────────────────────────────────────── */
+    h1, h2, h3, h4 { font-family: var(--heading); font-weight: 700; line-height: 1.2; }
+    h1 { font-size: clamp(2.4rem, 6vw, 3.8rem); }
+    h2 { font-size: clamp(1.8rem, 3.5vw, 2.5rem); }
+    h3 { font-size: 1.15rem; }
+    p  { color: var(--body); }
+
+    .eyebrow {
+      display: block;
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 0.65rem;
+    }
+
+    /* ── Layout ────────────────────────────────────────────────── */
+    .container {
+      width: 100%;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 clamp(1.25rem, 4vw, 2.5rem);
+    }
+
+    section { padding: clamp(4rem, 8vw, 6.5rem) 0; }
+
+    .divider {
+      width: 44px;
+      height: 4px;
+      border-radius: 4px;
+      margin: 0.75rem 0 1.5rem;
+    }
+
+    /* ── Icons ─────────────────────────────────────────────────── */
+    .icon {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      vertical-align: middle;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex-shrink: 0;
+    }
+
+    /* ── Buttons ───────────────────────────────────────────────── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--sans);
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      border-radius: var(--r-pill);
+      transition: background 0.2s, box-shadow 0.25s, transform 0.15s;
+    }
+    .btn:active { transform: translateY(0) !important; }
+
+    .btn-primary {
+      background: var(--coral);
+      color: var(--white);
+      font-size: 0.95rem;
+      padding: 0.875rem 2rem;
+    }
+    .btn-primary:hover {
+      background: var(--coral-dark);
+      box-shadow: 0 0 0 5px var(--glow-coral), 0 6px 20px rgba(255,107,107,0.28);
+      transform: translateY(-2px);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--ink);
+      font-size: 0.95rem;
+      padding: 0.85rem 1.75rem;
+      border: 2px solid var(--border);
+    }
+    .btn-ghost:hover {
+      border-color: var(--teal);
+      box-shadow: 0 0 0 4px var(--glow-teal);
+      transform: translateY(-2px);
+    }
+
+    .btn-submit {
+      width: 100%;
+      justify-content: center;
+      background: var(--coral);
+      color: var(--white);
+      font-size: 1rem;
+      padding: 1rem 2rem;
+      margin-top: 0.5rem;
+    }
+    .btn-submit:hover {
+      background: var(--coral-dark);
+      box-shadow: 0 0 0 5px var(--glow-coral), 0 6px 20px rgba(255,107,107,0.28);
+      transform: translateY(-2px);
+    }
+    .btn-submit:disabled {
+      opacity: 0.65;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+
+    /* ── Pill badge ─────────────────────────────────────────────── */
+    .pill {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.3rem 0.85rem;
+      border-radius: var(--r-pill);
+    }
+    .pill-teal   { background: var(--teal-light);   color: var(--teal-dark); }
+    .pill-coral  { background: var(--coral-light);  color: var(--coral-dark); }
+    .pill-yellow { background: var(--yellow-light); color: #8A6C00; }
+    .pill-purple { background: var(--purple-light); color: #6040C8; }
+
+    /* ── Cards ──────────────────────────────────────────────────── */
+    .card {
+      background: var(--white);
+      border: 2px solid var(--border);
+      border-radius: var(--r);
+    }
+
+    /* ── Nav ────────────────────────────────────────────────────── */
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,253,249,0.94);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 2px solid var(--border);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 clamp(1.25rem, 4vw, 2.5rem);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+    }
+
+    .nav-logo-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--coral);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-size: 1.25rem;
+    }
+
+    .nav-logo-icon .icon { width: 20px; height: 20px; stroke-width: 2; }
+
+    .nav-logo-text {
+      font-family: var(--heading);
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--ink);
+      line-height: 1.15;
+    }
+
+    .nav-logo-sub {
+      font-family: var(--sans);
+      font-size: 0.68rem;
+      font-weight: 600;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--coral); }
+
+    .nav-toggle {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.4rem;
+      color: var(--ink);
+      border-radius: var(--r-sm);
+      transition: background 0.2s;
+    }
+    .nav-toggle:hover { background: var(--border); }
+    .nav-toggle .icon { width: 22px; height: 22px; }
+
+    /* ── Hero ───────────────────────────────────────────────────── */
+    #hero {
+      padding: clamp(4rem, 10vw, 7rem) 0 0;
+      background: linear-gradient(160deg, #FFF9F0 0%, #FFF0F9 55%, #F0FAFF 100%);
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      padding-bottom: clamp(3rem, 6vw, 5rem);
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--teal-dark);
+      background: var(--teal-light);
+      padding: 0.4rem 1rem;
+      border-radius: var(--r-pill);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-tag .icon { width: 12px; height: 12px; }
+
+    .hero-headline { margin-bottom: 1.25rem; }
+
+    .hero-headline .highlight {
+      color: var(--coral);
+      position: relative;
+    }
+    .hero-headline .highlight::after {
+      content: '';
+      position: absolute;
+      bottom: 1px;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: var(--yellow);
+      border-radius: 3px;
+      z-index: -1;
+      opacity: 0.65;
+    }
+
+    .hero-sub {
+      font-size: 1.05rem;
+      color: var(--body);
+      line-height: 1.8;
+      max-width: 460px;
+      margin-bottom: 2.25rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    /* stat bubbles */
+    .hero-bubbles {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .hero-bubble {
+      background: var(--white);
+      border-radius: var(--r);
+      padding: 1.5rem 1.25rem;
+      text-align: center;
+      border-top: 4px solid transparent;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+      transition: transform 0.25s;
+    }
+    .hero-bubble:hover { transform: translateY(-4px); }
+    .hero-bubble:nth-child(1) { border-color: var(--coral);  }
+    .hero-bubble:nth-child(2) { border-color: var(--teal);   }
+    .hero-bubble:nth-child(3) { border-color: var(--yellow); }
+    .hero-bubble:nth-child(4) { border-color: var(--purple); }
+
+    .bubble-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 0.6rem;
+    }
+    .bubble-icon .icon { width: 18px; height: 18px; stroke-width: 2; }
+
+    .hero-bubble:nth-child(1) .bubble-icon { background: var(--coral-light);  color: var(--coral);  }
+    .hero-bubble:nth-child(2) .bubble-icon { background: var(--teal-light);   color: var(--teal);   }
+    .hero-bubble:nth-child(3) .bubble-icon { background: var(--yellow-light); color: #8A6C00;        }
+    .hero-bubble:nth-child(4) .bubble-icon { background: var(--purple-light); color: var(--purple); }
+
+    .bubble-num {
+      font-family: var(--heading);
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--ink);
+      line-height: 1;
+    }
+    .bubble-label { font-size: 0.75rem; color: var(--muted); font-weight: 600; margin-top: 0.25rem; }
+
+    .trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      grid-column: 1 / -1;
+      padding-top: 0.25rem;
+    }
+
+    /* ── Philosophy strip ───────────────────────────────────────── */
+    #philosophy {
+      background: var(--ink);
+      padding: clamp(2.5rem, 5vw, 3.5rem) 0;
+    }
+
+    .philosophy-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .phil-item {
+      padding: 2rem clamp(1.5rem, 3vw, 2.5rem);
+      border-right: 1px solid rgba(255,255,255,0.08);
+      text-align: center;
+    }
+    .phil-item:last-child { border-right: none; }
+
+    .phil-icon-wrap {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+    }
+    .phil-icon-wrap .icon { width: 22px; height: 22px; stroke-width: 2; }
+
+    .phil-item:nth-child(1) .phil-icon-wrap { background: rgba(255,107,107,0.15); color: var(--coral); }
+    .phil-item:nth-child(2) .phil-icon-wrap { background: rgba(255,217,61,0.15);  color: var(--yellow);}
+    .phil-item:nth-child(3) .phil-icon-wrap { background: rgba(78,205,196,0.15);  color: var(--teal);  }
+
+    .phil-word {
+      font-family: var(--heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+    .phil-item:nth-child(1) .phil-word { color: var(--coral);  }
+    .phil-item:nth-child(2) .phil-word { color: var(--yellow); }
+    .phil-item:nth-child(3) .phil-word { color: var(--teal);   }
+
+    .phil-desc { font-size: 0.85rem; color: rgba(255,255,255,0.45); line-height: 1.65; }
+
+    /* ── Gallery ────────────────────────────────────────────────── */
+    #gallery { background: var(--bg-alt); }
+
+    .gallery-header { text-align: center; margin-bottom: clamp(2rem, 4vw, 3rem); }
+    .gallery-header .eyebrow { color: var(--coral-dark); }
+    .gallery-header .divider { margin: 0.75rem auto 1.25rem; background: var(--coral); }
+    .gallery-header p { max-width: 500px; margin: 0 auto; }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--r-sm);
+    }
+    .gallery-item.tall  { grid-row: span 2; }
+    .gallery-item.wide  { grid-column: span 2; }
+
+    /* Real photo */
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: var(--r-sm);
+      transition: transform 0.4s ease;
+    }
+    .gallery-item:hover img { transform: scale(1.04); }
+
+    /* Placeholder */
+    .gallery-ph {
+      width: 100%;
+      min-height: 220px;
+      border-radius: var(--r-sm);
+      border: 2px dashed;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.65rem;
+      transition: transform 0.25s;
+    }
+    .gallery-item.tall .gallery-ph  { min-height: 460px; }
+    .gallery-item:hover .gallery-ph { transform: scale(1.01); }
+
+    .gallery-item:nth-child(1) .gallery-ph { background: var(--coral-light);  border-color: var(--coral);  }
+    .gallery-item:nth-child(2) .gallery-ph { background: var(--teal-light);   border-color: var(--teal);   }
+    .gallery-item:nth-child(3) .gallery-ph { background: var(--yellow-light); border-color: var(--yellow); }
+    .gallery-item:nth-child(4) .gallery-ph { background: var(--purple-light); border-color: var(--purple); }
+    .gallery-item:nth-child(5) .gallery-ph { background: var(--teal-light);   border-color: var(--teal);   }
+
+    .gallery-ph .icon { width: 28px; height: 28px; stroke-width: 1.5; opacity: 0.4; }
+
+    .gallery-ph-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink);
+      opacity: 0.4;
+      text-align: center;
+      padding: 0 1rem;
+    }
+
+    /* hover caption on real images */
+    .gallery-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,0.55));
+      color: var(--white);
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 2.5rem 1rem 0.85rem;
+      opacity: 0;
+      transition: opacity 0.3s;
+      border-radius: 0 0 var(--r-sm) var(--r-sm);
+    }
+    .gallery-item:hover .gallery-caption { opacity: 1; }
+
+    .gallery-note {
+      text-align: center;
+      margin-top: 1.25rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+    .gallery-note code {
+      background: var(--border);
+      padding: 0.1em 0.4em;
+      border-radius: 4px;
+      font-size: 0.8rem;
+    }
+
+    /* ── Provider ───────────────────────────────────────────────── */
+    #provider { background: var(--white); }
+
+    .provider-grid {
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      gap: clamp(2.5rem, 5vw, 5rem);
+      align-items: start;
+    }
+
+    .provider-card {
+      background: var(--bg);
+      border: 2px solid var(--border);
+      border-radius: var(--r);
+      overflow: hidden;
+      position: sticky;
+      top: 88px;
+    }
+
+    .provider-photo { width: 100%; aspect-ratio: 4/5; overflow: hidden; }
+
+    .provider-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Placeholder when no photo yet */
+    .provider-ph {
+      width: 100%;
+      height: 100%;
+      min-height: 300px;
+      background: linear-gradient(145deg, var(--teal-light) 0%, #E8F4FF 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+    }
+
+    .provider-ph-icon {
+      width: 64px;
+      height: 64px;
+      background: rgba(78,205,196,0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--teal-dark);
+    }
+    .provider-ph-icon .icon { width: 28px; height: 28px; stroke-width: 1.5; }
+
+    .provider-ph-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--teal-dark);
+      opacity: 0.6;
+    }
+
+    .provider-meta { padding: 1.5rem; }
+
+    .provider-name {
+      font-family: var(--heading);
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+    }
+
+    .provider-title {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+    }
+
+    .credential-list { list-style: none; display: flex; flex-direction: column; gap: 0.55rem; }
+    .credential-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.65rem;
+      font-size: 0.82rem;
+      color: var(--body);
+      line-height: 1.45;
+    }
+
+    .cred-icon {
+      width: 22px;
+      height: 22px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 0.05em;
+    }
+    .cred-icon .icon { width: 13px; height: 13px; stroke-width: 2.5; }
+
+    .cred-coral  { background: var(--coral-light);  color: var(--coral-dark); }
+    .cred-teal   { background: var(--teal-light);   color: var(--teal-dark);  }
+    .cred-yellow { background: var(--yellow-light); color: #8A6C00;            }
+
+    /* Bio side */
+    .bio-section .eyebrow { color: var(--coral); }
+    .bio-section .divider { background: var(--coral); }
+
+    .bio-pullquote {
+      background: var(--coral-light);
+      border-left: 4px solid var(--coral);
+      border-radius: 0 var(--r-sm) var(--r-sm) 0;
+      padding: 1.25rem 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .bio-pullquote p {
+      font-family: var(--heading);
+      font-size: 1.15rem;
+      font-weight: 600;
+      font-style: italic;
+      color: var(--coral-dark);
+      line-height: 1.55;
+    }
+
+    .bio-text { font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.4rem; }
+
+    .approach-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .approach-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+    /* ── Enrollment ─────────────────────────────────────────────── */
+    #enrollment { background: var(--bg); }
+
+    .enrollment-header { max-width: 560px; margin-bottom: clamp(2.5rem, 5vw, 4rem); }
+    .enrollment-header .eyebrow { color: var(--purple); }
+    .enrollment-header .divider { background: var(--purple); }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .step-card {
+      background: var(--white);
+      border: 2px solid var(--border);
+      border-radius: var(--r);
+      padding: 2rem 1.75rem;
+      border-top: 4px solid transparent;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .step-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.07); }
+    .step-card:nth-child(1) { border-top-color: var(--coral);  }
+    .step-card:nth-child(2) { border-top-color: var(--teal);   }
+    .step-card:nth-child(3) { border-top-color: var(--purple); }
+
+    .step-icon-wrap {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+    .step-icon-wrap .icon { width: 20px; height: 20px; stroke-width: 2; }
+
+    .step-card:nth-child(1) .step-icon-wrap { background: var(--coral-light);  color: var(--coral);  }
+    .step-card:nth-child(2) .step-icon-wrap { background: var(--teal-light);   color: var(--teal);   }
+    .step-card:nth-child(3) .step-icon-wrap { background: var(--purple-light); color: var(--purple); }
+
+    .step-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 0.3rem;
+    }
+    .step-card:nth-child(1) .step-label { color: var(--coral);  }
+    .step-card:nth-child(2) .step-label { color: var(--teal-dark); }
+    .step-card:nth-child(3) .step-label { color: var(--purple); }
+
+    .step-title {
+      font-family: var(--heading);
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 0.65rem;
+    }
+    .step-body { font-size: 0.9rem; line-height: 1.72; }
+
+    .step-note {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 0.28rem 0.75rem;
+      border-radius: var(--r-pill);
+      margin-top: 1rem;
+    }
+    .step-card:nth-child(1) .step-note { background: var(--coral-light);  color: var(--coral-dark); }
+    .step-card:nth-child(2) .step-note { background: var(--teal-light);   color: var(--teal-dark);  }
+    .step-card:nth-child(3) .step-note { background: var(--purple-light); color: #5830C0;            }
+
+    .transition-callout {
+      background: var(--yellow-light);
+      border: 2px solid var(--yellow);
+      border-radius: var(--r);
+      padding: 1.5rem 2rem;
+      margin-bottom: 2.5rem;
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+    }
+
+    .callout-icon-wrap {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: rgba(255,217,61,0.3);
+      color: #8A6C00;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .callout-icon-wrap .icon { width: 20px; height: 20px; stroke-width: 2; }
+
+    .callout-title {
+      font-family: var(--heading);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 0.3rem;
+    }
+
+    .callout-body { font-size: 0.9rem; line-height: 1.65; }
+
+    .enrollment-detail-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+
+    .detail-card {
+      background: var(--white);
+      border: 2px solid var(--border);
+      border-radius: var(--r);
+      padding: 1.75rem 2rem;
+    }
+    .detail-card:nth-child(1) { border-top: 4px solid var(--teal);  }
+    .detail-card:nth-child(2) { border-top: 4px solid var(--coral); }
+
+    .detail-card h3 {
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .data-table { width: 100%; border-collapse: collapse; }
+    .data-table tr { border-bottom: 1px solid var(--border); }
+    .data-table tr:last-child { border-bottom: none; }
+    .data-table td { padding: 0.65rem 0; font-size: 0.875rem; }
+    .data-table td:last-child { text-align: right; font-weight: 700; color: var(--teal-dark); }
+
+    .data-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.65rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.875rem;
+    }
+    .data-row:last-child { border-bottom: none; }
+    .data-row-val { font-weight: 700; color: var(--coral-dark); }
+    .data-row dt { font-weight: 400; }
+    .data-row dd { margin: 0; }
+
+    /* ── Icon size modifiers ────────────────────────────────────── */
+    .icon-xs  { width: 11px; height: 11px; stroke-width: 3; }
+    .icon-sm  { width: 14px; height: 14px; }
+    .icon-md  { width: 16px; height: 16px; }
+    .icon-lg  { width: 20px; height: 20px; }
+
+    /* ── Nav CTA size override ──────────────────────────────────── */
+    .btn-nav { font-size: 0.82rem; padding: 0.5rem 1.2rem; }
+
+    /* ── Enrollment intro paragraph ─────────────────────────────── */
+    .enrollment-intro { margin-top: 1rem; font-size: 1rem; line-height: 1.75; }
+
+    /* ── Waitlist pill spacing ──────────────────────────────────── */
+    .mt-1 { margin-top: 1rem; }
+
+    /* ── Detail card note ───────────────────────────────────────── */
+    .detail-note {
+      margin-top: 1rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    /* ── Contact value links ────────────────────────────────────── */
+    a.contact-val { text-decoration: none; }
+
+    /* ── Form success icon ──────────────────────────────────────── */
+    .icon-success {
+      width: 20px;
+      height: 20px;
+      margin-right: 0.5rem;
+      vertical-align: middle;
+    }
+
+    /* ── Contact ────────────────────────────────────────────────── */
+    #contact {
+      background: linear-gradient(145deg, #FFF0E0 0%, #FFE8F0 50%, #E8F0FF 100%);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .contact-copy .eyebrow { color: var(--coral); }
+    .contact-copy .divider { background: var(--coral); }
+    .contact-copy > p { font-size: 1.05rem; line-height: 1.8; margin: 1.25rem 0 2rem; }
+
+    .contact-details { display: flex; flex-direction: column; gap: 0.85rem; }
+
+    .contact-line {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .contact-icon-wrap {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .contact-icon-wrap .icon { width: 17px; height: 17px; stroke-width: 2; }
+
+    .ci-email  { background: var(--coral-light);  color: var(--coral);  }
+    .ci-phone  { background: var(--teal-light);   color: var(--teal-dark); }
+    .ci-clock  { background: var(--yellow-light); color: #8A6C00; }
+
+    .contact-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+    .contact-val   { font-size: 0.95rem; font-weight: 700; color: var(--ink); }
+
+    /* Form */
+    .inquiry-form-card {
+      background: var(--white);
+      border-radius: var(--r);
+      padding: 2.5rem;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+    }
+
+    .inquiry-form-card .eyebrow { color: var(--purple); margin-bottom: 1.5rem; }
+
+    .form-row { margin-bottom: 1.15rem; }
+
+    .form-label {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .required-mark { color: var(--coral); font-size: 0.7rem; }
+
+    .form-control {
+      width: 100%;
+      background: var(--bg);
+      border: 2px solid var(--border);
+      border-radius: var(--r-sm);
+      padding: 0.75rem 1rem;
+      font-size: 0.925rem;
+      color: var(--ink);
+      outline: none;
+      appearance: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .form-control::placeholder { color: var(--muted); }
+    .form-control:focus {
+      border-color: var(--coral);
+      box-shadow: 0 0 0 4px var(--glow-coral);
+    }
+    .form-control.is-error {
+      border-color: var(--error);
+      box-shadow: 0 0 0 4px rgba(239,68,68,0.15);
+    }
+
+    textarea.form-control { resize: none; min-height: 90px; }
+
+    .field-error {
+      font-size: 0.78rem;
+      color: var(--error);
+      font-weight: 600;
+      margin-top: 0.3rem;
+      display: none;
+    }
+    .field-error.visible { display: block; }
+
+    .form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+    /* Form states */
+    .form-status {
+      display: none;
+      text-align: center;
+      padding: 1.5rem;
+      border-radius: var(--r-sm);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .form-status.success {
+      display: block;
+      background: #ECFDF5;
+      color: #065F46;
+      border: 2px solid #A7F3D0;
+    }
+
+    /* ── Footer ─────────────────────────────────────────────────── */
+    .site-footer {
+      background: var(--ink);
+      padding: 2.5rem 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 clamp(1.25rem, 4vw, 2.5rem);
+    }
+
+    .footer-logo {
+      font-family: var(--heading);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.65);
+    }
+    .footer-logo span { color: var(--coral); }
+
+    .footer-license {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.25);
+      letter-spacing: 0.04em;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+    .footer-links a {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.3);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--coral); }
+
+    /* ── Responsive ─────────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .hero-grid,
+      .provider-grid,
+      .contact-grid { grid-template-columns: 1fr; }
+
+      .hero-visual  { display: none; }
+      .provider-card { position: static; }
+
+      .steps-grid { grid-template-columns: 1fr; }
+      .enrollment-detail-grid { grid-template-columns: 1fr; }
+
+      .philosophy-grid { grid-template-columns: 1fr; }
+      .phil-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
+      .phil-item:last-child { border-bottom: none; }
+
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+      .gallery-item.wide { grid-column: span 2; }
+      .gallery-item.tall { grid-row: span 1; }
+      .gallery-item.tall .gallery-ph { min-height: 220px; }
+
+      .footer-inner { flex-direction: column; gap: 1rem; text-align: center; }
+      .footer-links { justify-content: center; }
+      .nav-toggle { display: flex; }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+        background: rgba(255,253,249,0.98);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border-bottom: 2px solid var(--border);
+        padding: 1rem clamp(1.25rem, 4vw, 2.5rem) 1.5rem;
+        gap: 0;
+        z-index: 99;
+      }
+      .nav-links.is-open { display: flex; }
+      .nav-links.is-open li { border-bottom: 1px solid var(--border); }
+      .nav-links.is-open li:last-child { border-bottom: none; }
+      .nav-links.is-open a { display: block; padding: 0.85rem 0; font-size: 1rem; }
+    }
+
+    @media (max-width: 600px) {
+      .form-row-2  { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-item.wide  { grid-column: span 1; }
+      .transition-callout { flex-direction: column; }
+    }
+  </style>
+
+<style id="theme-overrides">
+  /* ── Concept Banner ─────────────────────────────────────── */
+  .concept-banner {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+    background: #2E2A24; color: rgba(255,255,255,0.9);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 1.5rem; height: 38px;
+    font-size: 0.78rem; font-family: monospace; letter-spacing: 0.04em;
+  }
+  .concept-banner__links { display: flex; gap: 0.4rem; align-items: center; }
+  .concept-banner__links a {
+    color: rgba(255,255,255,0.5); text-decoration: none;
+    padding: 3px 10px; border-radius: 4px; font-size: 0.75rem;
+    transition: background 0.15s, color 0.15s;
+  }
+  .concept-banner__links a:hover { background: rgba(255,255,255,0.12); color: #fff; }
+  .concept-banner__links a.active { background: rgba(255,255,255,0.2); color: #fff; }
+  body  { padding-top: 38px; }
+  .site-nav { top: 38px; }
+  @media (max-width: 900px) { .nav-links { top: 106px; } }
+
+  /* ── C: Nature Nest — variable overrides ────────────────── */
+  :root {
+    --coral:        #C96A4E;
+    --coral-dark:   #b05940;
+    --coral-light:  #F5E8E4;
+    --teal:         #74B3CE;
+    --teal-dark:    #5699b8;
+    --teal-light:   #E8F4FA;
+    --yellow:       #E8C87A;
+    --yellow-light: #F5EDD8;
+    --purple:       #87A878;
+    --purple-light: #EBF2E8;
+    --white:        #FFFFFF;
+    --bg:           #F9F5EE;
+    --bg-alt:       #EFE8DC;
+    --bg-teal:      #E8F4FA;
+    --ink:          #2E2A24;
+    --body:         #6B6158;
+    --muted:        #96897E;
+    --border:       #E8D5B7;
+    --glow-coral:   rgba(201,106,78,0.18);
+    --glow-teal:    rgba(116,179,206,0.18);
+    --heading:      'Poppins', system-ui, sans-serif;
+    --sans:         'Lato', system-ui, sans-serif;
+    --r:            14px;
+    --r-sm:         8px;
+    --r-pill:       10px;
+  }
+
+  /* ── Nav ─────────────────────────────────────────────────── */
+  .site-nav { background: rgba(249,245,238,0.94); border-bottom-color: var(--border); }
+  .nav-links a:hover { color: var(--coral-dark); }
+  @media (max-width: 900px) {
+    .nav-links { background: rgba(249,245,238,0.98); border-bottom-color: var(--border); }
+  }
+
+  /* ── Hero: meadow gradient + rolling hill ────────────────── */
+  #hero {
+    background: linear-gradient(160deg, #EBF2E8 0%, #D6E8D0 55%, #E8F4FA 100%);
+    overflow: hidden;
+    position: relative;
+  }
+  #hero::before {
+    content: '';
+    position: absolute;
+    bottom: -2px; left: -5%;
+    width: 110%; height: 80px;
+    background: var(--bg);
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    pointer-events: none; z-index: 1;
+  }
+  #hero::after { display: none; }
+  .hero-grid { position: relative; z-index: 2; }
+  .hero-tag { background: rgba(135,168,120,0.18); color: var(--coral-dark); }
+
+  /* Hero highlight: terracotta colour only */
+  .hero-headline .highlight { color: var(--coral); }
+  .hero-headline .highlight::after { background: transparent; opacity: 0; }
+
+  /* ── Cards: sand border + warm diffuse shadow ────────────── */
+  .card, .provider-card { border: 1px solid var(--border); box-shadow: 0 4px 20px rgba(100,80,50,0.10); }
+  .card:hover, .provider-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(100,80,50,0.18); }
+  .step-card { border: 1px solid var(--border); border-top: 4px solid transparent; box-shadow: 0 4px 20px rgba(100,80,50,0.08); }
+  .step-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(100,80,50,0.18); }
+  .detail-card { border: 1px solid var(--border); box-shadow: 0 4px 20px rgba(100,80,50,0.08); }
+  .inquiry-form-card { box-shadow: 0 8px 40px rgba(100,80,50,0.12); }
+  .step-icon-wrap { border-radius: 60% 40% 60% 40% / 40% 60% 40% 60%; }
+
+  /* ── Form focus: sage ────────────────────────────────────── */
+  .form-control:focus { border-color: var(--purple); box-shadow: 0 0 0 4px rgba(135,168,120,0.22); }
+
+  /* ── Sections ────────────────────────────────────────────── */
+  #gallery  { background: var(--bg-alt); }
+  #provider { background: var(--bg); }
+  #philosophy { background: var(--ink); }
+  #contact { background: linear-gradient(145deg, #EBF2E8 0%, var(--bg) 50%, #E8F4FA 100%); }
+
+  /* ── Typography ──────────────────────────────────────────── */
+  h1, h2, h3, h4 { letter-spacing: -0.01em; }
+  h1 { font-weight: 800; }
+
+  /* ── Misc ────────────────────────────────────────────────── */
+  .bio-pullquote { background: var(--coral-light); border-left-color: var(--coral); }
+  .bio-pullquote p { color: var(--coral-dark); }
+  .transition-callout { background: var(--yellow-light); border-color: var(--yellow); }
+  .callout-icon-wrap { background: rgba(232,200,122,0.3); color: #7a5c00; }
+  .footer-logo span { color: var(--coral); }
+  .pill-purple { background: var(--purple-light); color: #4a6e42; }
+</style>
+</head>
+<body>
+<div class="concept-banner" role="navigation" aria-label="Design concept previews">
+  <span>&#9685; Concept C &mdash; Nature Nest &nbsp;|&nbsp; Earthy tones &amp; Poppins</span>
+  <nav class="concept-banner__links">
+    <a href="preview-index.html">&larr; Hub</a>
+    <a href="index.html">Original</a>
+    <a href="preview-a.html">A: Storybook</a>
+    <a href="preview-b.html">B: Block Party</a>
+    <a href="preview-c.html" class="active" aria-current="page">C: Nature Nest</a>
+  </nav>
+</div>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- ── SVG Icon Sprite ───────────────────────────────────────── -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><polyline points="9 22 9 12 15 12 15 22"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.82a19.79 19.79 0 01-3.07-8.67A2 2 0 012.18 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 19.11a1 1 0 001.69 1.06L12 12M3 3l18 18"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></symbol>
+  <symbol id="i-apple" viewBox="0 0 24 24"><path d="M12 2a3 3 0 013 3v1h2a5 5 0 015 5v5a5 5 0 01-5 5H7a5 5 0 01-5-5v-5a5 5 0 015-5h2V5a3 3 0 013-3z"/></symbol>
+  <symbol id="i-brush" viewBox="0 0 24 24"><path d="M9.06 11.9l8.07-8.06a2.85 2.85 0 114.03 4.03l-8.06 8.08"/><path d="M7.07 14.94C5.79 16.2 5 17.45 5 19a2 2 0 004 0c0-1.55-.79-2.8-1.93-4.06z"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></symbol>
+  <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5L12 3z"/><path d="M5 17l.75 2.25L8 20l-2.25.75L5 23l-.75-2.25L2 20l2.25-.75L5 17z"/><path d="M19 3l.75 2.25L22 6l-2.25.75L19 9l-.75-2.25L16 6l2.25-.75L19 3z"/></symbol>
+  <symbol id="i-seedling" viewBox="0 0 24 24"><path d="M12 22V12M12 12C12 7 7 4 3 5c0 4 2 8 9 7M12 12c0-5 5-8 9-7 0 4-2 8-9 7"/></symbol>
+  <symbol id="i-badge" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></symbol>
+</svg>
+
+<!-- ── Nav ──────────────────────────────────────────────────────── -->
+<header>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" aria-label="Vivy Family Daycare — home">
+        <div class="nav-logo-icon" aria-hidden="true">
+          <svg class="icon"><use href="#i-home"/></svg>
+        </div>
+        <div>
+          <span class="nav-logo-text">Vivy Family Daycare</span>
+          <span class="nav-logo-sub">The Modern Village</span>
+        </div>
+      </a>
+
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#gallery">Photos</a></li>
+        <li><a href="#provider">About</a></li>
+        <li><a href="#enrollment">Enrollment</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links" id="nav-toggle">
+        <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
+      </button>
+
+      <a href="#contact" class="btn btn-primary btn-nav">
+        Let's Connect
+        <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+      </a>
+    </div>
+  </nav>
+</header>
+
+<main id="main-content">
+
+  <!-- ── Hero ─────────────────────────────────────────────────── -->
+  <section id="hero" aria-labelledby="hero-heading">
+    <div class="container">
+      <div class="hero-grid">
+
+        <div class="hero-copy">
+          <div class="hero-tag" aria-label="Location">
+            <svg class="icon" aria-hidden="true"><use href="#i-sparkle"/></svg>
+            Licensed Home Daycare &middot; [City, State]
+          </div>
+          <h1 id="hero-heading" class="hero-headline">
+            Where little ones<br/><span class="highlight">grow together.</span>
+          </h1>
+          <p class="hero-sub">
+            A small, intentional home daycare built on real connection — not enrollment numbers.
+            Structure without rigidity. Warmth without compromise.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">
+              Check Availability
+              <svg class="icon icon-md" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+            </a>
+            <a href="#enrollment" class="btn btn-ghost">How It Works</a>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-bubbles" role="list">
+            <div class="hero-bubble" role="listitem">
+              <div class="bubble-icon"><svg class="icon"><use href="#i-heart"/></svg></div>
+              <div class="bubble-num">6</div>
+              <div class="bubble-label">Max enrollment</div>
+            </div>
+            <div class="hero-bubble" role="listitem">
+              <div class="bubble-icon"><svg class="icon"><use href="#i-star"/></svg></div>
+              <div class="bubble-num">6wk–5y</div>
+              <div class="bubble-label">Ages served</div>
+            </div>
+            <div class="hero-bubble" role="listitem">
+              <div class="bubble-icon"><svg class="icon"><use href="#i-sun"/></svg></div>
+              <div class="bubble-num">M–F</div>
+              <div class="bubble-label">7:00 AM – 5:30 PM</div>
+            </div>
+            <div class="hero-bubble" role="listitem">
+              <div class="bubble-icon"><svg class="icon"><use href="#i-shield"/></svg></div>
+              <div class="bubble-num">1:3</div>
+              <div class="bubble-label">Caregiver ratio</div>
+            </div>
+            <div class="trust-row">
+              <span class="pill pill-teal">
+                <svg class="icon icon-xs" aria-hidden="true"><use href="#i-check"/></svg>
+                State Licensed
+              </span>
+              <span class="pill pill-teal">
+                <svg class="icon icon-xs" aria-hidden="true"><use href="#i-check"/></svg>
+                CPR Certified
+              </span>
+              <span class="pill pill-teal">
+                <svg class="icon icon-xs" aria-hidden="true"><use href="#i-check"/></svg>
+                15 Years Experience
+              </span>
+              <span class="pill pill-teal">
+                <svg class="icon icon-xs" aria-hidden="true"><use href="#i-check"/></svg>
+                Subsidy Accepted
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Philosophy ────────────────────────────────────────────── -->
+  <section id="philosophy" aria-label="Our approach">
+    <div class="container">
+      <div class="philosophy-grid" role="list">
+
+        <div class="phil-item" role="listitem">
+          <div class="phil-icon-wrap" aria-hidden="true"><svg class="icon"><use href="#i-target"/></svg></div>
+          <p class="phil-word">Intentional.</p>
+          <p class="phil-desc">Every element of the day — from routines to materials — is chosen with care.</p>
+        </div>
+
+        <div class="phil-item" role="listitem">
+          <div class="phil-icon-wrap" aria-hidden="true"><svg class="icon"><use href="#i-sun"/></svg></div>
+          <p class="phil-word">Warm.</p>
+          <p class="phil-desc">Relationships come first. Your child is known here — not just enrolled.</p>
+        </div>
+
+        <div class="phil-item" role="listitem">
+          <div class="phil-icon-wrap" aria-hidden="true"><svg class="icon"><use href="#i-shield"/></svg></div>
+          <p class="phil-word">Reliable.</p>
+          <p class="phil-desc">Consistent structure, clear communication, and a provider you can count on.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Gallery ───────────────────────────────────────────────── -->
+  <section id="gallery" aria-labelledby="gallery-heading">
+    <div class="container">
+
+      <header class="gallery-header">
+        <span class="eyebrow">Life at the Village</span>
+        <h2 id="gallery-heading">A peek inside our days</h2>
+        <div class="divider"></div>
+        <p>Every day is full of play, discovery, and genuine connection. Here's a glimpse of what your child's days will look like.</p>
+      </header>
+
+      <div class="gallery-grid" role="list">
+
+        <figure class="gallery-item tall" role="listitem">
+          <!-- Replace with: <img src="your-photo.jpg" alt="Children doing art and crafts" class="gallery-photo" /> -->
+          <div class="gallery-ph" aria-label="Photo placeholder: Art and creative play">
+            <svg class="icon" aria-hidden="true"><use href="#i-brush"/></svg>
+            <span class="gallery-ph-label">Art &amp; Creative Play</span>
+          </div>
+          <figcaption class="gallery-caption">Art &amp; Creative Play</figcaption>
+        </figure>
+
+        <figure class="gallery-item" role="listitem">
+          <div class="gallery-ph" aria-label="Photo placeholder: Story time">
+            <svg class="icon" aria-hidden="true"><use href="#i-book"/></svg>
+            <span class="gallery-ph-label">Story Time</span>
+          </div>
+          <figcaption class="gallery-caption">Story Time</figcaption>
+        </figure>
+
+        <figure class="gallery-item" role="listitem">
+          <div class="gallery-ph" aria-label="Photo placeholder: Outdoor exploration">
+            <svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg>
+            <span class="gallery-ph-label">Outdoor Exploration</span>
+          </div>
+          <figcaption class="gallery-caption">Outdoor Exploration</figcaption>
+        </figure>
+
+        <figure class="gallery-item wide" role="listitem">
+          <div class="gallery-ph" aria-label="Photo placeholder: Sensory and building play">
+            <svg class="icon" aria-hidden="true"><use href="#i-grid"/></svg>
+            <span class="gallery-ph-label">Sensory &amp; Building Play</span>
+          </div>
+          <figcaption class="gallery-caption">Sensory &amp; Building Play</figcaption>
+        </figure>
+
+        <figure class="gallery-item" role="listitem">
+          <div class="gallery-ph" aria-label="Photo placeholder: Snack and lunch time">
+            <svg class="icon" aria-hidden="true"><use href="#i-apple"/></svg>
+            <span class="gallery-ph-label">Snack &amp; Lunch Time</span>
+          </div>
+          <figcaption class="gallery-caption">Snack &amp; Lunch Time</figcaption>
+        </figure>
+
+      </div>
+
+      <p class="gallery-note">
+        Replace any placeholder with <code>&lt;img src="your-photo.jpg" alt="description"&gt;</code> inside the <code>&lt;figure&gt;</code> element.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ── Meet the Provider ─────────────────────────────────────── -->
+  <section id="provider" aria-labelledby="provider-heading">
+    <div class="container">
+      <div class="provider-grid">
+
+        <aside aria-label="Provider credentials">
+          <div class="provider-card">
+            <div class="provider-photo">
+              <!-- Replace with: <img src="provider-photo.jpg" alt="[Provider Name], lead provider at Vivy Family Daycare" /> -->
+              <div class="provider-ph" aria-label="Photo placeholder for provider">
+                <div class="provider-ph-icon">
+                  <svg class="icon" aria-hidden="true"><use href="#i-user"/></svg>
+                </div>
+                <span class="provider-ph-label">[Provider Name]'s Photo</span>
+              </div>
+            </div>
+            <div class="provider-meta">
+              <p class="provider-name">[Provider Name]</p>
+              <p class="provider-title">Lead Provider &middot; Licensed Family Childcare</p>
+              <ul class="credential-list" aria-label="Credentials and qualifications">
+                <li>
+                  <span class="cred-icon cred-coral" aria-hidden="true">
+                    <svg class="icon"><use href="#i-badge"/></svg>
+                  </span>
+                  15 years of early childhood education experience
+                </li>
+                <li>
+                  <span class="cred-icon cred-teal" aria-hidden="true">
+                    <svg class="icon"><use href="#i-shield"/></svg>
+                  </span>
+                  First Aid &amp; CPR Certified
+                </li>
+                <li>
+                  <span class="cred-icon cred-yellow" aria-hidden="true">
+                    <svg class="icon"><use href="#i-check"/></svg>
+                  </span>
+                  State Licensed Family Childcare Provider — FL
+                </li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+
+        <article class="bio-section" aria-labelledby="provider-heading">
+          <span class="eyebrow">Meet the Lead Provider</span>
+          <div class="divider" aria-hidden="true"></div>
+          <h2 id="provider-heading">Built on trust,<br/>run with heart.</h2>
+
+          <blockquote class="bio-pullquote">
+            <p>"I started this program because I believe the best early childhood environments don't feel like institutions — they feel like an extension of your family's community."</p>
+          </blockquote>
+
+          <p class="bio-text">
+            With 15 years of experience in early childhood education, I run a small, intentional
+            program designed for exactly that. Every child here is known by name, by habit, by
+            the face they make before they're ready to share. The group stays small on purpose —
+            because real connection requires it.
+          </p>
+
+          <p class="bio-text">
+            What you'll find here is structure without rigidity: consistent daily rhythms that help
+            children feel safe, paired with the flexibility that real life demands. We move outside,
+            we read a lot, we learn through play, and we take the messy parts of childhood seriously.
+          </p>
+
+          <p class="bio-text">
+            I'm a provider and a parent. I understand what it means to hand your child to someone
+            else for the day. That trust is not something I take lightly — it's the foundation
+            everything else is built on.
+          </p>
+
+          <p class="approach-label">My approach in three words</p>
+          <div class="approach-tags">
+            <span class="pill pill-coral">Intentional</span>
+            <span class="pill pill-teal">Warm</span>
+            <span class="pill pill-yellow">Reliable</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Enrollment ─────────────────────────────────────────────── -->
+  <section id="enrollment" aria-labelledby="enrollment-heading">
+    <div class="container">
+
+      <header class="enrollment-header">
+        <span class="eyebrow">Enrollment Process</span>
+        <div class="divider" aria-hidden="true"></div>
+        <h2 id="enrollment-heading">Simple, clear,<br/>and on your timeline.</h2>
+        <p class="enrollment-intro">
+          We keep this process direct — because your time matters, and the right fit should be obvious when you find it.
+        </p>
+      </header>
+
+      <ol class="steps-grid" aria-label="Enrollment steps">
+
+        <li class="step-card">
+          <div class="step-icon-wrap" aria-hidden="true"><svg class="icon"><use href="#i-mail"/></svg></div>
+          <p class="step-label">Step 01</p>
+          <h3 class="step-title">Reach Out</h3>
+          <p class="step-body">Fill out the short inquiry form or email us directly. Let us know your child's age, desired start date, and schedule needs.</p>
+          <span class="step-note">Response within 1 business day</span>
+        </li>
+
+        <li class="step-card">
+          <div class="step-icon-wrap" aria-hidden="true"><svg class="icon"><use href="#i-phone"/></svg></div>
+          <p class="step-label">Step 02</p>
+          <h3 class="step-title">Intro Call</h3>
+          <p class="step-body">A 15-minute phone or video call — no pressure, no commitment. Ask your most important questions and confirm whether our schedules and values align.</p>
+          <span class="step-note">15 min &middot; Phone or video</span>
+        </li>
+
+        <li class="step-card">
+          <div class="step-icon-wrap" aria-hidden="true"><svg class="icon"><use href="#i-home"/></svg></div>
+          <p class="step-label">Step 03</p>
+          <h3 class="step-title">In-Person Tour</h3>
+          <p class="step-body">See the space, meet [Provider Name], and observe an active program day when possible. Bring your child — their comfort here matters too.</p>
+          <span class="step-note">Bring your child &middot; No obligation</span>
+        </li>
+
+      </ol>
+
+      <div class="transition-callout" role="note" aria-label="What happens after the tour">
+        <div class="callout-icon-wrap" aria-hidden="true">
+          <svg class="icon"><use href="#i-seedling"/></svg>
+        </div>
+        <div>
+          <p class="callout-title">After the tour: Paperwork &amp; Your Child's Transition Week</p>
+          <p class="callout-body">
+            Once you're ready, we send a digital enrollment packet — straightforward and easy to complete on your own time.
+            Every new child gets a custom <strong>transition week</strong> with shorter days first, so connection builds
+            before the full schedule begins. No cold-start drop-offs, ever.
+          </p>
+        </div>
+      </div>
+
+      <div class="enrollment-detail-grid">
+
+        <div class="detail-card">
+          <h3>Current Availability</h3>
+          <table class="data-table" aria-label="Current open spots by age group">
+            <tbody>
+              <tr><td>Infant (6–12 months)</td><td>[#] open</td></tr>
+              <tr><td>Toddler (1–2 years)</td><td>[#] open</td></tr>
+              <tr><td>Preschool (3–5 years)</td><td>[#] open</td></tr>
+            </tbody>
+          </table>
+          <p class="pill pill-teal mt-1">Waitlist available for all age groups</p>
+        </div>
+
+        <div class="detail-card">
+          <h3>Tuition &amp; Hours</h3>
+          <dl aria-label="Tuition and schedule details">
+            <div class="data-row"><dt>Program Hours</dt><dd class="data-row-val">Mon–Fri, 7:00 AM–5:30 PM</dd></div>
+            <div class="data-row"><dt>Full-Time (5 days)</dt><dd class="data-row-val">$[XXX] / week</dd></div>
+            <div class="data-row"><dt>Part-Time (3 days)</dt><dd class="data-row-val">$[XXX] / week</dd></div>
+            <div class="data-row"><dt>Enrollment Deposit</dt><dd class="data-row-val">[2-week] tuition</dd></div>
+          </dl>
+          <p class="detail-note">Subsidy &amp; assistance programs accepted — contact us to confirm.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Contact ───────────────────────────────────────────────── -->
+  <section id="contact" aria-labelledby="contact-heading">
+    <div class="container">
+      <div class="contact-grid">
+
+        <div class="contact-copy">
+          <span class="eyebrow">Start the Conversation</span>
+          <div class="divider" aria-hidden="true"></div>
+          <h2 id="contact-heading">We'd rather answer ten questions now than leave you guessing.</h2>
+          <p>Every family starts with a simple message. No application, no commitment, no pressure — just a conversation to see if this is the right fit.</p>
+
+          <address class="contact-details" aria-label="Contact information">
+            <div class="contact-line">
+              <div class="contact-icon-wrap ci-email" aria-hidden="true">
+                <svg class="icon"><use href="#i-mail"/></svg>
+              </div>
+              <div>
+                <p class="contact-label">Email</p>
+                <a href="mailto:[email@example.com]" class="contact-val">[email@example.com]</a>
+              </div>
+            </div>
+            <div class="contact-line">
+              <div class="contact-icon-wrap ci-phone" aria-hidden="true">
+                <svg class="icon"><use href="#i-phone"/></svg>
+              </div>
+              <div>
+                <p class="contact-label">Phone</p>
+                <a href="tel:#" class="contact-val">[(XXX) XXX-XXXX]</a>
+              </div>
+            </div>
+            <div class="contact-line">
+              <div class="contact-icon-wrap ci-clock" aria-hidden="true">
+                <svg class="icon"><use href="#i-clock"/></svg>
+              </div>
+              <div>
+                <p class="contact-label">Response Time</p>
+                <p class="contact-val">Within 1 business day</p>
+              </div>
+            </div>
+          </address>
+        </div>
+
+        <div class="inquiry-form-card">
+          <span class="eyebrow">Inquiry Form</span>
+
+          <form id="inquiry-form" action="https://formspree.io/f/[YOUR_FORMSPREE_ID]" method="POST" novalidate aria-label="Inquiry form">
+            <div class="form-row-2">
+              <div class="form-row">
+                <label for="f-name" class="form-label">
+                  Your Name <span class="required-mark" aria-hidden="true">*</span>
+                </label>
+                <input
+                  id="f-name"
+                  name="name"
+                  type="text"
+                  class="form-control"
+                  placeholder="First &amp; last name"
+                  autocomplete="name"
+                  required
+                  aria-required="true"
+                  aria-describedby="f-name-error"
+                />
+                <p id="f-name-error" class="field-error" role="alert">Please enter your name.</p>
+              </div>
+              <div class="form-row">
+                <label for="f-age" class="form-label">
+                  Child's Age <span class="required-mark" aria-hidden="true">*</span>
+                </label>
+                <select
+                  id="f-age"
+                  name="child_age"
+                  class="form-control"
+                  required
+                  aria-required="true"
+                  aria-describedby="f-age-error"
+                >
+                  <option value="" disabled selected>Select age group</option>
+                  <option value="infant">Infant (6–12 months)</option>
+                  <option value="toddler">Toddler (1–2 years)</option>
+                  <option value="preschool">Preschool (3–5 years)</option>
+                </select>
+                <p id="f-age-error" class="field-error" role="alert">Please select an age group.</p>
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-row">
+                <label for="f-email" class="form-label">
+                  Email <span class="required-mark" aria-hidden="true">*</span>
+                </label>
+                <input
+                  id="f-email"
+                  name="email"
+                  type="email"
+                  class="form-control"
+                  placeholder="you@email.com"
+                  autocomplete="email"
+                  required
+                  aria-required="true"
+                  aria-describedby="f-email-error"
+                />
+                <p id="f-email-error" class="field-error" role="alert">Please enter a valid email address.</p>
+              </div>
+              <div class="form-row">
+                <label for="f-start" class="form-label">Desired Start</label>
+                <input
+                  id="f-start"
+                  name="start_date"
+                  type="text"
+                  class="form-control"
+                  placeholder="e.g. September 2025"
+                  autocomplete="off"
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label for="f-message" class="form-label">Anything you'd like us to know</label>
+              <textarea
+                id="f-message"
+                name="message"
+                class="form-control"
+                placeholder="Schedule needs, questions, whatever's on your mind..."
+                aria-label="Optional message"
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-submit" id="submit-btn">
+              <span id="submit-label">Start the Conversation</span>
+              <svg class="icon icon-md" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+            </button>
+          </form>
+
+          <div id="form-success" class="form-status success" role="status" aria-live="polite">
+            <svg class="icon icon-success" aria-hidden="true"><use href="#i-check"/></svg>
+            Thank you! We'll be in touch within one business day.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ── Footer ────────────────────────────────────────────────── -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p class="footer-logo">Vivy <span>Family</span> Daycare</p>
+    <p class="footer-license">Licensed Family Childcare &middot; [City, State] &middot; &copy; 2025</p>
+    <ul class="footer-links" role="list">
+      <li><a href="#gallery">Photos</a></li>
+      <li><a href="#provider">About</a></li>
+      <li><a href="#enrollment">Enrollment</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    'use strict';
+
+    /* ── Mobile nav toggle ──────────────────────────────────── */
+    var navToggle = document.getElementById('nav-toggle');
+    var navLinks  = document.getElementById('nav-links');
+
+    if (navToggle && navLinks) {
+      navToggle.addEventListener('click', function () {
+        var isOpen = navLinks.classList.toggle('is-open');
+        navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        navToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+        var iconUse = navToggle.querySelector('use');
+        if (iconUse) iconUse.setAttribute('href', isOpen ? '#i-x' : '#i-menu');
+      });
+
+      navLinks.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          navLinks.classList.remove('is-open');
+          navToggle.setAttribute('aria-expanded', 'false');
+          navToggle.setAttribute('aria-label', 'Open navigation menu');
+          var iconUse = navToggle.querySelector('use');
+          if (iconUse) iconUse.setAttribute('href', '#i-menu');
+        });
+      });
+    }
+
+    /* ── Inquiry form ───────────────────────────────────────── */
+    var form    = document.getElementById('inquiry-form');
+    var btn     = document.getElementById('submit-btn');
+    var label   = document.getElementById('submit-label');
+    var success = document.getElementById('form-success');
+
+    function getField(id) { return document.getElementById(id); }
+    function getError(id) { return document.getElementById(id + '-error'); }
+
+    function setError(fieldId, message) {
+      var field = getField(fieldId);
+      var err   = getError(fieldId);
+      if (!field || !err) return;
+      field.classList.add('is-error');
+      field.setAttribute('aria-invalid', 'true');
+      err.textContent = message;
+      err.classList.add('visible');
+    }
+
+    function clearError(fieldId) {
+      var field = getField(fieldId);
+      var err   = getError(fieldId);
+      if (!field || !err) return;
+      field.classList.remove('is-error');
+      field.removeAttribute('aria-invalid');
+      err.classList.remove('visible');
+    }
+
+    function isValidEmail(val) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
+    }
+
+    function validate() {
+      var valid = true;
+      var name  = getField('f-name').value.trim();
+      var age   = getField('f-age').value;
+      var email = getField('f-email').value.trim();
+
+      if (!name)  { setError('f-name',  'Please enter your name.');           valid = false; }
+      else          { clearError('f-name'); }
+
+      if (!age)   { setError('f-age',   'Please select an age group.');       valid = false; }
+      else          { clearError('f-age'); }
+
+      if (!email || !isValidEmail(email)) {
+        setError('f-email', 'Please enter a valid email address.');
+        valid = false;
+      } else {
+        clearError('f-email');
+      }
+
+      return valid;
+    }
+
+    /* Live validation on blur */
+    ['f-name', 'f-age', 'f-email'].forEach(function (id) {
+      var el = getField(id);
+      if (el) el.addEventListener('blur', function () { validate(); });
+    });
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      if (!validate()) {
+        var firstError = form.querySelector('[aria-invalid="true"]');
+        if (firstError) firstError.focus();
+        return;
+      }
+
+      btn.disabled = true;
+      if (label) label.textContent = 'Sending\u2026';
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      })
+        .then(function (res) {
+          if (res.ok) {
+            form.style.display = 'none';
+            success.style.display = 'block';
+          } else {
+            return res.json().then(function (data) {
+              throw new Error(data.error || 'Submission failed.');
+            });
+          }
+        })
+        .catch(function () {
+          btn.disabled = false;
+          if (label) label.textContent = 'Start the Conversation';
+          setError('f-email', 'Something went wrong. Please email us directly.');
+        });
+    });
+
+  }());
+</script>
+
+</body>
+</html>
