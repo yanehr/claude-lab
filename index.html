@@ -861,6 +861,42 @@
     }
     .data-row:last-child { border-bottom: none; }
     .data-row-val { font-weight: 700; color: var(--coral-dark); }
+    .data-row dt { font-weight: 400; }
+    .data-row dd { margin: 0; }
+
+    /* ── Icon size modifiers ────────────────────────────────────── */
+    .icon-xs  { width: 11px; height: 11px; stroke-width: 3; }
+    .icon-sm  { width: 14px; height: 14px; }
+    .icon-md  { width: 16px; height: 16px; }
+    .icon-lg  { width: 20px; height: 20px; }
+
+    /* ── Nav CTA size override ──────────────────────────────────── */
+    .btn-nav { font-size: 0.82rem; padding: 0.5rem 1.2rem; }
+
+    /* ── Enrollment intro paragraph ─────────────────────────────── */
+    .enrollment-intro { margin-top: 1rem; font-size: 1rem; line-height: 1.75; }
+
+    /* ── Waitlist pill spacing ──────────────────────────────────── */
+    .mt-1 { margin-top: 1rem; }
+
+    /* ── Detail card note ───────────────────────────────────────── */
+    .detail-note {
+      margin-top: 1rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    /* ── Contact value links ────────────────────────────────────── */
+    a.contact-val { text-decoration: none; }
+
+    /* ── Form success icon ──────────────────────────────────────── */
+    .icon-success {
+      width: 20px;
+      height: 20px;
+      margin-right: 0.5rem;
+      vertical-align: middle;
+    }
 
     /* ── Contact ────────────────────────────────────────────────── */
     #contact {
@@ -1105,6 +1141,8 @@
   <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5L12 3z"/><path d="M5 17l.75 2.25L8 20l-2.25.75L5 23l-.75-2.25L2 20l2.25-.75L5 17z"/><path d="M19 3l.75 2.25L22 6l-2.25.75L19 9l-.75-2.25L16 6l2.25-.75L19 3z"/></symbol>
   <symbol id="i-seedling" viewBox="0 0 24 24"><path d="M12 22V12M12 12C12 7 7 4 3 5c0 4 2 8 9 7M12 12c0-5 5-8 9-7 0 4-2 8-9 7"/></symbol>
   <symbol id="i-badge" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></symbol>
 </svg>
 
 <!-- ── Nav ──────────────────────────────────────────────────────── -->
@@ -1132,9 +1170,9 @@
         <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
       </button>
 
-      <a href="#contact" class="btn btn-primary" style="font-size:0.82rem; padding:0.5rem 1.2rem;">
+      <a href="#contact" class="btn btn-primary btn-nav">
         Let's Connect
-        <svg class="icon" style="width:14px;height:14px" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+        <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow-right"/></svg>
       </a>
     </div>
   </nav>
@@ -1162,7 +1200,7 @@
           <div class="hero-actions">
             <a href="#contact" class="btn btn-primary">
               Check Availability
-              <svg class="icon" aria-hidden="true" style="width:16px;height:16px"><use href="#i-arrow-right"/></svg>
+              <svg class="icon icon-md" aria-hidden="true"><use href="#i-arrow-right"/></svg>
             </a>
             <a href="#enrollment" class="btn btn-ghost">How It Works</a>
           </div>
@@ -1192,19 +1230,19 @@
             </div>
             <div class="trust-row">
               <span class="pill pill-teal">
-                <svg class="icon" aria-hidden="true" style="width:11px;height:11px;stroke-width:3"><use href="#i-check"/></svg>
+                <svg class="icon icon-xs" aria-hidden="true"><use href="#i-check"/></svg>
                 State Licensed
               </span>
               <span class="pill pill-teal">
-                <svg class="icon" aria-hidden="true" style="width:11px;height:11px;stroke-width:3"><use href="#i-check"/></svg>
+                <svg class="icon icon-xs" aria-hidden="true"><use href="#i-check"/></svg>
                 CPR Certified
               </span>
               <span class="pill pill-teal">
-                <svg class="icon" aria-hidden="true" style="width:11px;height:11px;stroke-width:3"><use href="#i-check"/></svg>
+                <svg class="icon icon-xs" aria-hidden="true"><use href="#i-check"/></svg>
                 15 Years Experience
               </span>
               <span class="pill pill-teal">
-                <svg class="icon" aria-hidden="true" style="width:11px;height:11px;stroke-width:3"><use href="#i-check"/></svg>
+                <svg class="icon icon-xs" aria-hidden="true"><use href="#i-check"/></svg>
                 Subsidy Accepted
               </span>
             </div>
@@ -1396,7 +1434,7 @@
         <span class="eyebrow">Enrollment Process</span>
         <div class="divider" aria-hidden="true"></div>
         <h2 id="enrollment-heading">Simple, clear,<br/>and on your timeline.</h2>
-        <p style="margin-top:1rem; font-size:1rem; line-height:1.75;">
+        <p class="enrollment-intro">
           We keep this process direct — because your time matters, and the right fit should be obvious when you find it.
         </p>
       </header>
@@ -1454,18 +1492,18 @@
               <tr><td>Preschool (3–5 years)</td><td>[#] open</td></tr>
             </tbody>
           </table>
-          <p class="pill pill-teal" style="margin-top:1rem; display:inline-block;">Waitlist available for all age groups</p>
+          <p class="pill pill-teal mt-1">Waitlist available for all age groups</p>
         </div>
 
         <div class="detail-card">
           <h3>Tuition &amp; Hours</h3>
           <dl aria-label="Tuition and schedule details">
-            <div class="data-row"><span>Program Hours</span><span class="data-row-val">Mon–Fri, 7:00 AM–5:30 PM</span></div>
-            <div class="data-row"><span>Full-Time (5 days)</span><span class="data-row-val">$[XXX] / week</span></div>
-            <div class="data-row"><span>Part-Time (3 days)</span><span class="data-row-val">$[XXX] / week</span></div>
-            <div class="data-row"><span>Enrollment Deposit</span><span class="data-row-val">[2-week] tuition</span></div>
+            <div class="data-row"><dt>Program Hours</dt><dd class="data-row-val">Mon–Fri, 7:00 AM–5:30 PM</dd></div>
+            <div class="data-row"><dt>Full-Time (5 days)</dt><dd class="data-row-val">$[XXX] / week</dd></div>
+            <div class="data-row"><dt>Part-Time (3 days)</dt><dd class="data-row-val">$[XXX] / week</dd></div>
+            <div class="data-row"><dt>Enrollment Deposit</dt><dd class="data-row-val">[2-week] tuition</dd></div>
           </dl>
-          <p style="margin-top:1rem; font-size:0.82rem; color:var(--muted); font-weight:600;">Subsidy &amp; assistance programs accepted — contact us to confirm.</p>
+          <p class="detail-note">Subsidy &amp; assistance programs accepted — contact us to confirm.</p>
         </div>
 
       </div>
@@ -1491,7 +1529,7 @@
               </div>
               <div>
                 <p class="contact-label">Email</p>
-                <a href="mailto:[email@example.com]" class="contact-val" style="text-decoration:none;">[email@example.com]</a>
+                <a href="mailto:[email@example.com]" class="contact-val">[email@example.com]</a>
               </div>
             </div>
             <div class="contact-line">
@@ -1500,7 +1538,7 @@
               </div>
               <div>
                 <p class="contact-label">Phone</p>
-                <a href="tel:#" class="contact-val" style="text-decoration:none;">[(XXX) XXX-XXXX]</a>
+                <a href="tel:#" class="contact-val">[(XXX) XXX-XXXX]</a>
               </div>
             </div>
             <div class="contact-line">
@@ -1518,7 +1556,7 @@
         <div class="inquiry-form-card">
           <span class="eyebrow">Inquiry Form</span>
 
-          <form id="inquiry-form" novalidate aria-label="Inquiry form">
+          <form id="inquiry-form" action="https://formspree.io/f/[YOUR_FORMSPREE_ID]" method="POST" novalidate aria-label="Inquiry form">
             <div class="form-row-2">
               <div class="form-row">
                 <label for="f-name" class="form-label">
@@ -1601,13 +1639,13 @@
             </div>
 
             <button type="submit" class="btn btn-submit" id="submit-btn">
-              Start the Conversation
-              <svg class="icon" aria-hidden="true" style="width:16px;height:16px"><use href="#i-arrow-right"/></svg>
+              <span id="submit-label">Start the Conversation</span>
+              <svg class="icon icon-md" aria-hidden="true"><use href="#i-arrow-right"/></svg>
             </button>
           </form>
 
           <div id="form-success" class="form-status success" role="status" aria-live="polite">
-            <svg class="icon" aria-hidden="true" style="width:20px;height:20px;margin-right:0.5rem;vertical-align:middle"><use href="#i-check"/></svg>
+            <svg class="icon icon-success" aria-hidden="true"><use href="#i-check"/></svg>
             Thank you! We'll be in touch within one business day.
           </div>
         </div>
@@ -1636,16 +1674,42 @@
   (function () {
     'use strict';
 
-    const form    = document.getElementById('inquiry-form');
-    const btn     = document.getElementById('submit-btn');
-    const success = document.getElementById('form-success');
+    /* ── Mobile nav toggle ──────────────────────────────────── */
+    var navToggle = document.getElementById('nav-toggle');
+    var navLinks  = document.getElementById('nav-links');
 
-    function getField(id)  { return document.getElementById(id); }
-    function getError(id)  { return document.getElementById(id + '-error'); }
+    if (navToggle && navLinks) {
+      navToggle.addEventListener('click', function () {
+        var isOpen = navLinks.classList.toggle('is-open');
+        navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        navToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+        var iconUse = navToggle.querySelector('use');
+        if (iconUse) iconUse.setAttribute('href', isOpen ? '#i-x' : '#i-menu');
+      });
+
+      navLinks.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          navLinks.classList.remove('is-open');
+          navToggle.setAttribute('aria-expanded', 'false');
+          navToggle.setAttribute('aria-label', 'Open navigation menu');
+          var iconUse = navToggle.querySelector('use');
+          if (iconUse) iconUse.setAttribute('href', '#i-menu');
+        });
+      });
+    }
+
+    /* ── Inquiry form ───────────────────────────────────────── */
+    var form    = document.getElementById('inquiry-form');
+    var btn     = document.getElementById('submit-btn');
+    var label   = document.getElementById('submit-label');
+    var success = document.getElementById('form-success');
+
+    function getField(id) { return document.getElementById(id); }
+    function getError(id) { return document.getElementById(id + '-error'); }
 
     function setError(fieldId, message) {
-      const field = getField(fieldId);
-      const err   = getError(fieldId);
+      var field = getField(fieldId);
+      var err   = getError(fieldId);
       if (!field || !err) return;
       field.classList.add('is-error');
       field.setAttribute('aria-invalid', 'true');
@@ -1654,8 +1718,8 @@
     }
 
     function clearError(fieldId) {
-      const field = getField(fieldId);
-      const err   = getError(fieldId);
+      var field = getField(fieldId);
+      var err   = getError(fieldId);
       if (!field || !err) return;
       field.classList.remove('is-error');
       field.removeAttribute('aria-invalid');
@@ -1667,17 +1731,16 @@
     }
 
     function validate() {
-      let valid = true;
+      var valid = true;
+      var name  = getField('f-name').value.trim();
+      var age   = getField('f-age').value;
+      var email = getField('f-email').value.trim();
 
-      const name  = getField('f-name').value.trim();
-      const age   = getField('f-age').value;
-      const email = getField('f-email').value.trim();
+      if (!name)  { setError('f-name',  'Please enter your name.');           valid = false; }
+      else          { clearError('f-name'); }
 
-      if (!name)  { setError('f-name', 'Please enter your name.');            valid = false; }
-      else         { clearError('f-name'); }
-
-      if (!age)   { setError('f-age',  'Please select an age group.');        valid = false; }
-      else         { clearError('f-age'); }
+      if (!age)   { setError('f-age',   'Please select an age group.');       valid = false; }
+      else          { clearError('f-age'); }
 
       if (!email || !isValidEmail(email)) {
         setError('f-email', 'Please enter a valid email address.');
@@ -1691,7 +1754,7 @@
 
     /* Live validation on blur */
     ['f-name', 'f-age', 'f-email'].forEach(function (id) {
-      const el = getField(id);
+      var el = getField(id);
       if (el) el.addEventListener('blur', function () { validate(); });
     });
 
@@ -1699,21 +1762,36 @@
       e.preventDefault();
 
       if (!validate()) {
-        /* Focus first error field */
-        const firstError = form.querySelector('[aria-invalid="true"]');
+        var firstError = form.querySelector('[aria-invalid="true"]');
         if (firstError) firstError.focus();
         return;
       }
 
-      /* Simulate async submission */
       btn.disabled = true;
-      btn.textContent = 'Sending\u2026';
+      if (label) label.textContent = 'Sending\u2026';
 
-      setTimeout(function () {
-        form.style.display = 'none';
-        success.style.display = 'block';
-      }, 900);
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      })
+        .then(function (res) {
+          if (res.ok) {
+            form.style.display = 'none';
+            success.style.display = 'block';
+          } else {
+            return res.json().then(function (data) {
+              throw new Error(data.error || 'Submission failed.');
+            });
+          }
+        })
+        .catch(function () {
+          btn.disabled = false;
+          if (label) label.textContent = 'Start the Conversation';
+          setError('f-email', 'Something went wrong. Please email us directly.');
+        });
     });
+
   }());
 </script>
 
